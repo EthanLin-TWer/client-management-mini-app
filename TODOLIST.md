@@ -21,3 +21,5 @@
 ## 常用链接
 
 * https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=556692551&lang=zh_CN
+* 简易教程：https://developers.weixin.qq.com/miniprogram/dev/index.html
+* 如何入门微信小程序开发，有哪些学习资料？https://www.zhihu.com/question/50907897
