@@ -17,3 +17,7 @@
   * 通过什么关联一个会员？手机号？微信号？真实姓名？
 3. 管理员可以增加会员消费记录
 4. 会员可以查看自己的消费记录
+
+## 常用链接
+
+* https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=556692551&lang=zh_CN
