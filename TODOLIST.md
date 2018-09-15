@@ -4,7 +4,7 @@
 2. [x] IDE https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html
 3. [x] 信息填写 - 名字、图标、简介，获得 AppID：`wx02b43870631e6685`
 4. [x] 线下推广材料 - zip 下载
-5. 入口文件
+5. [x] 入口文件 - 已理解
 6. 怎么安装到手机上运行起来？
 7. 怎么申请后端？- 腾讯云
 
