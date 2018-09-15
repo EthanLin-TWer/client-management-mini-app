@@ -1,1 +1,4 @@
-/* pages/manager/add-member-info/index.wxss */
+.name-field {
+  border-radius: 5rpx;
+  border-color: blue;
+}

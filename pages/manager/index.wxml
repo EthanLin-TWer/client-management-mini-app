@@ -1,4 +1,3 @@
 <view class="container">
   <button bindtap="addMemberInfo">新增记录</button>
-  <text>{{ message }}</text>
 </view>

@@ -1,7 +1,5 @@
 Page({
-  data: {
-    message: 'message'
-  },
+  data: { },
 
   addMemberInfo: function() {
     wx.navigateTo({

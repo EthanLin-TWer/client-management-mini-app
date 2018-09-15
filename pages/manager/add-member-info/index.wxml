@@ -1,2 +1,15 @@
-<!--pages/manager/add-member-info/index.wxml-->
-<text>pages/manager/add-member-info/index.wxml</text>
+<view class="container">
+  <view class="input-container">
+    <input type="text" class="field name-field" placeholder="姓名" bindinput="onUsername" />
+  </view>
+
+  <view class="input-container">
+    <input type="text" class="field mobile-field" placeholder="手机号码" bindinput="onMobile" />
+  </view>
+  
+  <view class="input-container">
+    <input type="text" class="field privilege-field" placeholder="会员等级" bindinput="onPrivilege" />
+  </view>
+
+  <button type="primary" bindtap="onSubmit">确认</button>
+</view>
