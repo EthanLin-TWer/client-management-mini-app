@@ -23,3 +23,10 @@
 * https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=556692551&lang=zh_CN
 * 简易教程：https://developers.weixin.qq.com/miniprogram/dev/index.html
 * 如何入门微信小程序开发，有哪些学习资料？https://www.zhihu.com/question/50907897
+* https://developers.weixin.qq.com/miniprogram/dev/quickstart/basic/release.html
+* https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%BB%84%E4%BB%B6%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0
+* https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/template.html
+* https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/api.html
+* https://developers.weixin.qq.com/miniprogram/dev/framework/config.html
+* https://www.jianshu.com/p/68dfa292f3d6
+* https://www.jianshu.com/p/68dfa292f3d6
