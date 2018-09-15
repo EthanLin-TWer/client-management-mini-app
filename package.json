@@ -1,0 +1,48 @@
+{
+  "name": "client-management-mini-app",
+  "version": "1.0.0",
+  "description": "An app for my girl. ",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint app.js utils pages",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linesh-simplicity/client-management-mini-app.git"
+  },
+  "keywords": [
+    "mini-app"
+  ],
+  "author": "Linesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linesh-simplicity/client-management-mini-app/issues"
+  },
+  "homepage": "https://github.com/linesh-simplicity/client-management-mini-app#readme",
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.2"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/pages/**/*.test.js"
+    ],
+    "verbose": false,
+    "collectCoverage": false
+  }
+}
