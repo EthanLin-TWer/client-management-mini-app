@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/manager/index",
+    "pages/manager/add-member-info/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
