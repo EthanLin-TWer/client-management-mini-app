@@ -6,25 +6,29 @@ Page({
     privilege: '',
   },
 
-  onUsername: function({ detail: { value }}) {
+  onUsername: function({ detail: { value } }) {
     this.setData({
       username: value,
     })
   },
 
-  onMobile: function({ detail: { value }}) {
+  onMobile: function({ detail: { value } }) {
     this.setData({
       mobile: value,
     })
   },
 
-  onPrivilege: function({ detail: { value }}) {
+  onPrivilege: function({ detail: { value } }) {
     this.setData({
       privilege: value,
     })
   },
 
   onSubmit: function() {
+    const data = {
+      ...this.data,
+      time: Date.now(),
+    }
     // 将数据发送到后端
-  }
+  },
 })
