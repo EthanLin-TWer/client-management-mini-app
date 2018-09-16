@@ -25,6 +25,6 @@ Page({
   },
 
   onSubmit: function() {
-    console.log(this.data)
+    // 将数据发送到后端
   }
 })

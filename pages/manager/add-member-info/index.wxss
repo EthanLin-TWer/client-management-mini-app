@@ -1,3 +1,7 @@
+.field {
+  padding: 40rpx;
+}
+
 .name-field {
   border-radius: 5rpx;
   border-color: blue;
