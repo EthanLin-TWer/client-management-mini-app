@@ -12,12 +12,13 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     })
+
     // 获取用户信息
     wx.getSetting({
       success: (res) => {
         // 没有授权，直接返回
         if (!res.authSetting['scope.userInfo']) {
-          return 
+          return
         }
 
         // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
@@ -27,11 +28,6 @@ App({
             this.globalData = {
               userInfo,
               isAdmin: userInfo.nickName === '林燕玲',
-            }
-
-            // 在别的地方拿到 app 对象再塞回来的，这样违反开闭原则就问你怕不怕
-            if (this.userInfoReadyCallback) {
-              this.userInfoReadyCallback(res)
             }
           },
         })

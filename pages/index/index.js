@@ -1,5 +1,3 @@
-//index.js
-//获取应用实例
 const app = getApp()
 
 Page({
@@ -23,10 +21,11 @@ Page({
       })
     }
   },
-  onUserInfoReceived: function(e) {
-    app.globalData.userInfo = e.detail.userInfo
+
+  onUserInfoReceived: function({ detail: { userInfo } }) {
+    app.globalData.userInfo = userInfo
     this.setData({
-      userInfo: e.detail.userInfo,
+      userInfo,
       hasUserInfo: true,
     })
   },
