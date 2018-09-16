@@ -26,7 +26,7 @@ App({
             // 可以将 res 发送给后台解码出 unionId
             this.globalData = {
               userInfo,
-              isAdmin: userInfo.nickname === '林燕玲',
+              isAdmin: userInfo.nickName === '林燕玲',
             }
 
             // 在别的地方拿到 app 对象再塞回来的，这样违反开闭原则就问你怕不怕
