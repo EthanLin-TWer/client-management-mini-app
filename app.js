@@ -15,26 +15,31 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: (res) => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: (res) => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              // 但是这个 callback 是外界直接塞进来的，这样鬼知道整个应用有哪些地方往 app 对象塞值了，违反开闭原则啊
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            },
-          })
+        // 没有授权，直接返回
+        if (!res.authSetting['scope.userInfo']) {
+          return 
         }
+
+        // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+        wx.getUserInfo({
+          success: ({ userInfo }) => {
+            // 可以将 res 发送给后台解码出 unionId
+            this.globalData = {
+              userInfo,
+              isAdmin: userInfo.nickname === '林燕玲',
+            }
+
+            // 在别的地方拿到 app 对象再塞回来的，这样违反开闭原则就问你怕不怕
+            if (this.userInfoReadyCallback) {
+              this.userInfoReadyCallback(res)
+            }
+          },
+        })
       },
     })
   },
   globalData: {
     userInfo: null,
+    isAdmin: false,
   },
 })
