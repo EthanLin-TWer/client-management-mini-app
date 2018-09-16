@@ -8,12 +8,13 @@ Page({
     userInfo: {},
     hasUserInfo: false,
   },
-  //事件处理函数
-  bindViewTap: function() {
+
+  navigateToVisitLogs: function() {
     wx.navigateTo({
       url: '../logs/logs',
     })
   },
+
   onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
