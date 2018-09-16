@@ -29,6 +29,10 @@ Page({
       ...this.data,
       time: Date.now(),
     }
+
     // 将数据发送到后端
+    const memberRecords = wx.getStorageSync('memberRecords') || []
+    memberRecords.unshift(data)
+    wx.setStorageSync('memberRecords', memberRecords)
   },
 })
