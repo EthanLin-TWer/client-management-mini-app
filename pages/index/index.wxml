@@ -1,6 +1,6 @@
 <view class="container">
   <view wx:if="{{!hasUserInfo}}" class="guide-login">
-    <text>登录后可以获得专属您个人的健康全方位信息哟。</text>
+    <text class="message">登录获取您个人专属的健康全方位信息哟</text>
     <button class="login-button" open-type="getUserInfo" bindgetuserinfo="onUserInfoReceived">
      点此登录 
     </button>    
