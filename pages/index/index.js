@@ -1,7 +1,7 @@
 const app = getApp()
 
 Page({
-  data: { },
+  data: {},
 
   onLoad: function() {
     if (app.globalData.userInfo) {
@@ -9,22 +9,22 @@ Page({
     }
   },
 
-  onUserInfoReceived: function({ detail: { errMsg, userInfo }}) {
+  onUserInfoReceived: function({ detail: { errMsg, userInfo } }) {
     if (!errMsg.includes('ok')) {
       console.log('Login error', errMsg)
-      return 
+      return
     }
 
     app.globalData.userInfo = userInfo
     console.log(userInfo)
     if (userInfo.nickName === '林燕玲') {
       return ws.navigateTo({
-        url: '../manager/index'
+        url: '../manager/index',
       })
     }
-    
+
     return wx.navigateTo({
-      url: '../logs/logs'
+      url: '../logs/logs',
     })
   },
 })
