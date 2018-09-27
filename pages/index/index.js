@@ -1,31 +1,18 @@
 const app = getApp()
 
 Page({
-  data: {
-    userInfo: {},
-    hasUserInfo: false,
-  },
-
-  navigateToVisitLogs: function() {
-    wx.navigateTo({
-      url: '../logs/logs',
-    })
-  },
+  data: { },
 
   onLoad: function() {
     if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true,
-      })
+      // jump to specific page
     }
   },
 
   onUserInfoReceived: function({ detail: { userInfo } }) {
     app.globalData.userInfo = userInfo
-    this.setData({
-      userInfo,
-      hasUserInfo: true,
+    wx.navigateTo({
+      url: '../manager/index'
     })
   },
 })

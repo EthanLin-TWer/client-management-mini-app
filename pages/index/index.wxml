@@ -1,15 +1,6 @@
 <view class="container">
-  <view wx:if="{{!hasUserInfo}}" class="guide-login">
     <text class="message">登录获取您个人专属的健康全方位信息哟</text>
     <button class="login-button" open-type="getUserInfo" bindgetuserinfo="onUserInfoReceived">
-     点此登录 
-    </button>    
-  </view>
-
-  <view wx:else class="userinfo">
-    <block>
-      <image bindtap="navigateToVisitLogs" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
+     点此登录
+    </button>
 </view>
