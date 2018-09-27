@@ -9,10 +9,22 @@ Page({
     }
   },
 
-  onUserInfoReceived: function({ detail: { userInfo } }) {
+  onUserInfoReceived: function({ detail: { errMsg, userInfo }}) {
+    if (!errMsg.includes('ok')) {
+      console.log('Login error', errMsg)
+      return 
+    }
+
     app.globalData.userInfo = userInfo
-    wx.navigateTo({
-      url: '../manager/index'
+    console.log(userInfo)
+    if (userInfo.nickName === '林燕玲') {
+      return ws.navigateTo({
+        url: '../manager/index'
+      })
+    }
+    
+    return wx.navigateTo({
+      url: '../logs/logs'
     })
   },
 })
