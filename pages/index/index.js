@@ -16,9 +16,8 @@ Page({
     }
 
     app.globalData.userInfo = userInfo
-    console.log(userInfo)
     if (userInfo.nickName === '林燕玲') {
-      return ws.navigateTo({
+      return wx.navigateTo({
         url: '../manager/index',
       })
     }
