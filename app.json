@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/manager/index",
-    "pages/manager/add-member-info/index"
+    "pages/manager/add-member-info/index",
+    "pages/member/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
