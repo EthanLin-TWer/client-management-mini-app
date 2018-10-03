@@ -23,7 +23,7 @@ Page({
     }
 
     return wx.navigateTo({
-      url: '../logs/logs',
+      url: '../member/index',
     })
   },
 })
