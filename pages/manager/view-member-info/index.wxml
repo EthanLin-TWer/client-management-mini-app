@@ -1,2 +1,5 @@
-<!--pages/manager/view-member-info/index.wxml-->
-<text>pages/manager/view-member-info/index.wxml</text>
+<view class="container">
+  <view wx:for="{{ records }}" wx:key="mobile" wx:for-item="member">
+    {{ member.username }} {{ member.mobile }} {{ member.privilege }}
+  </view>
+</view>
