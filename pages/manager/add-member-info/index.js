@@ -4,7 +4,11 @@ Page({
     mobile: '',
     privilege: '',
 
-    memberPrivileges: [1, 2, 3],
+    memberPrivileges: [
+      '普通会员(0-1000元)',
+      '高级会员(1000-5000元)',
+      '骨灰级会员(5000+元)',
+    ],
     isFormCompleted: false,
   },
 
