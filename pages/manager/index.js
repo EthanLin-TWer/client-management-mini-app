@@ -9,7 +9,7 @@ Page({
 
   viewMemberInfo: function() {
     wx.navigateTo({
-      url: './view-member-info/index'
+      url: './view-member-info/index',
     })
-  }
+  },
 })

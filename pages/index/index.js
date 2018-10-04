@@ -11,8 +11,10 @@ Page({
 
   onUserInfoReceived: function({ detail: { errMsg, userInfo } }) {
     if (!errMsg.includes('ok')) {
-      console.log('Login error', errMsg)
-      return
+      return wx.showToast({
+        title: '登录失败',
+        duration: 2000,
+      })
     }
 
     app.globalData.userInfo = userInfo

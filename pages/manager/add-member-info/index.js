@@ -3,11 +3,7 @@ Page({
     username: '',
     mobile: '',
     privilege: '',
-    memberRankings: [
-      1,
-      2,
-      3
-    ],
+    memberRankings: [1, 2, 3],
     selectedRanking: '',
     isFormCompleted: false,
   },
@@ -34,9 +30,9 @@ Page({
   },
 
   updateFormCompleteness: function() {
-    const {username, mobile, privilege} = this.data
-    const fields = [username, mobile, privilege].map(field => field.trim())
-    const isFormCompleted = fields.every(field => field.length > 0)
+    const { username, mobile, privilege } = this.data
+    const fields = [username, mobile, privilege].map((field) => field.trim())
+    const isFormCompleted = fields.every((field) => field.length > 0)
 
     this.setData({
       isFormCompleted,
