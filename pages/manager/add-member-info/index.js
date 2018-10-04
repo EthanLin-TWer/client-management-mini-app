@@ -9,23 +9,37 @@ Page({
       3
     ],
     selectedRanking: '',
+    isFormCompleted: false,
   },
 
   onUsername: function({ detail: { value } }) {
     this.setData({
       username: value,
     })
+    this.updateFormCompleteness()
   },
 
   onMobile: function({ detail: { value } }) {
     this.setData({
       mobile: value,
     })
+    this.updateFormCompleteness()
   },
 
   onPrivilege: function({ detail: { value } }) {
     this.setData({
       privilege: value,
+    })
+    this.updateFormCompleteness()
+  },
+
+  updateFormCompleteness: function() {
+    const {username, mobile, privilege} = this.data
+    const fields = [username, mobile, privilege].map(field => field.trim())
+    const isFormCompleted = fields.every(field => field.length > 0)
+
+    this.setData({
+      isFormCompleted,
     })
   },
 
@@ -33,9 +47,14 @@ Page({
     this.setData({
       selectedRanking: value,
     })
+    this.updateFormCompleteness()
   },
 
   onSubmit: function() {
+    if (!this.data.isFormCompleted) {
+      return
+    }
+
     const data = {
       ...this.data,
       time: Date.now(),
@@ -44,8 +63,6 @@ Page({
     // 将数据发送到后端
     const memberRecords = wx.getStorageSync('memberRecords') || []
     memberRecords.unshift(data)
-    console.log('-------- memberRecords --------')
-    console.log(memberRecords)
     wx.setStorageSync('memberRecords', memberRecords)
   },
 })

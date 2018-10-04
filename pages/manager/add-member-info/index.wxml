@@ -20,5 +20,5 @@
     <input type="text" class="field privilege-field" bindinput="onPrivilege" />
   </view>
 
-  <button class="button" type="primary" bindtap="onSubmit">确认</button>
+  <button class="button" type="{{ isFormCompleted ? 'primary' : 'default'}}" bindtap="onSubmit">确认</button>
 </view>
