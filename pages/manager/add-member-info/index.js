@@ -64,11 +64,15 @@ Page({
     wx.showToast({
       title: '信息录入成功',
       icon: 'success',
-      duration: 1000,
+      duration: 10000,
+      mask: true,
     })
 
-    return wx.navigateTo({
-      url: '../index',
-    })
+    return setTimeout(() => {
+      wx.hideToast()
+      wx.navigateTo({
+        url: '../index',
+      })
+    }, 2000)
   },
 })
