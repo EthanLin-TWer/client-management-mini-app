@@ -1,9 +1,14 @@
-// pages/manager/add-member-info/indes.js
 Page({
   data: {
     username: '',
     mobile: '',
     privilege: '',
+    memberRankings: [
+      1,
+      2,
+      3
+    ],
+    selectedRanking: '',
   },
 
   onUsername: function({ detail: { value } }) {
@@ -24,6 +29,12 @@ Page({
     })
   },
 
+  onMemberRanking: function({ detail: { value } }) {
+    this.setData({
+      selectedRanking: value,
+    })
+  },
+
   onSubmit: function() {
     const data = {
       ...this.data,
@@ -33,6 +44,8 @@ Page({
     // 将数据发送到后端
     const memberRecords = wx.getStorageSync('memberRecords') || []
     memberRecords.unshift(data)
+    console.log('-------- memberRecords --------')
+    console.log(memberRecords)
     wx.setStorageSync('memberRecords', memberRecords)
   },
 })

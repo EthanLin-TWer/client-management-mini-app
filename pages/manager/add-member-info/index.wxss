@@ -1,8 +1,26 @@
-.field {
-  padding: 40rpx;
+.container {
+  padding: 20rpx;
+  border: 10rpx solid red;
 }
 
-.name-field {
-  border-radius: 5rpx;
-  border-color: blue;
+.input-container {
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  min-width: 180rpx;
+  padding: 0 20rpx;
+}
+
+.field {
+  border-bottom: thin solid #ccc;
+}
+
+.button {
+  width: 100%;
+  margin: 120rpx;
 }

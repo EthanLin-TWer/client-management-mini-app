@@ -1,15 +1,24 @@
 <view class="container">
   <view class="input-container">
-    <input type="text" class="field name-field" placeholder="姓名" bindinput="onUsername" />
+    <text class="label">姓名</text>
+    <input type="text" class="field name-field" bindinput="onUsername" />
   </view>
 
   <view class="input-container">
-    <input type="text" class="field mobile-field" placeholder="手机号码" bindinput="onMobile" />
-  </view>
-  
-  <view class="input-container">
-    <input type="text" class="field privilege-field" placeholder="会员等级" bindinput="onPrivilege" />
+    <text class="label">手机号码</text>
+    <input
+      type="number"
+      class="field mobile-field"
+      placeholder="11位手机号码"
+      placeholder-style="font-size: 32rpx; color: #bbb;"
+      bindinput="onMobile"
+    />
   </view>
 
-  <button type="primary" bindtap="onSubmit">确认</button>
+  <view class="input-container">
+    <text class="label">会员等级</text>
+    <input type="text" class="field privilege-field" bindinput="onPrivilege" />
+  </view>
+
+  <button class="button" type="primary" bindtap="onSubmit">确认</button>
 </view>

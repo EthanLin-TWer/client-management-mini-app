@@ -6,4 +6,10 @@ Page({
       url: './add-member-info/index',
     })
   },
+
+  viewMemberInfo: function() {
+    wx.navigateTo({
+      url: './view-member-info/index'
+    })
+  }
 })
