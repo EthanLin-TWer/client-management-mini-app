@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/manager/add-member-info/index",
-    "pages/manager/index",
     "pages/index/index",
+    "pages/manager/index",
+    "pages/manager/add-member-info/index",
     "pages/manager/view-member-info/index",
     "pages/member/index"
   ],
