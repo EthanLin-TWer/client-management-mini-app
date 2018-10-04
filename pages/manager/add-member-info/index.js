@@ -3,8 +3,8 @@ Page({
     username: '',
     mobile: '',
     privilege: '',
-    memberRankings: [1, 2, 3],
-    selectedRanking: '',
+
+    memberPrivileges: [1, 2, 3],
     isFormCompleted: false,
   },
 
@@ -22,28 +22,23 @@ Page({
     this.updateFormCompleteness()
   },
 
-  onPrivilege: function({ detail: { value } }) {
+  onPrivilege: function({ detail: { value: index } }) {
     this.setData({
-      privilege: value,
+      privilege: this.data.memberPrivileges[index],
     })
     this.updateFormCompleteness()
   },
 
   updateFormCompleteness: function() {
     const { username, mobile, privilege } = this.data
-    const fields = [username, mobile, privilege].map((field) => field.trim())
+    const fields = [username, mobile, privilege].map((field) =>
+      String(field).trim()
+    )
     const isFormCompleted = fields.every((field) => field.length > 0)
 
     this.setData({
       isFormCompleted,
     })
-  },
-
-  onMemberRanking: function({ detail: { value } }) {
-    this.setData({
-      selectedRanking: value,
-    })
-    this.updateFormCompleteness()
   },
 
   onSubmit: function() {

@@ -17,8 +17,22 @@
 
   <view class="input-container">
     <text class="label">会员等级</text>
-    <input type="text" class="field privilege-field" bindinput="onPrivilege" />
+    <view class="field picker">
+      <picker
+        bindchange="onPrivilege"
+        value="{{ privilege }}"
+        range="{{ memberPrivileges }}"
+      >
+        {{ privilege || '请选择' }}
+      </picker>
+    </view>
   </view>
 
-  <button class="button" type="{{ isFormCompleted ? 'primary' : 'default'}}" bindtap="onSubmit">确认</button>
+  <button
+    class="button"
+    type="{{ isFormCompleted ? 'primary' : 'default'}}"
+    bindtap="onSubmit"
+  >
+    确认
+  </button>
 </view>

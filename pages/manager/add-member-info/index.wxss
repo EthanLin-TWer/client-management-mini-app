@@ -1,25 +1,30 @@
 .container {
-  padding: 20rpx;
+  padding: 60rpx;
 }
 
 .input-container {
   margin-top: 80rpx;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .label {
   min-width: 180rpx;
-  padding: 0 20rpx;
 }
 
 .field {
   border-bottom: thin solid #ccc;
 }
 
+.picker {
+  width: 400rpx;
+  font-size: 32rpx;
+  color: #bbb;
+}
+
 .button {
   width: 100%;
-  margin: 120rpx;
+  margin: 120rpx 0;
 }
