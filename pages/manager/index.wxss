@@ -1,1 +1,3 @@
-/* pages/manager/index.wxss */
+.button {
+  margin-top: 60rpx;
+}

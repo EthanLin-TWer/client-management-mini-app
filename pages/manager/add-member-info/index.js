@@ -64,7 +64,7 @@ Page({
     wx.showToast({
       title: '信息录入成功',
       icon: 'success',
-      duration: 10000,
+      duration: 2000,
       mask: true,
     })
 
