@@ -60,5 +60,15 @@ Page({
     const memberRecords = wx.getStorageSync('memberRecords') || []
     memberRecords.unshift(data)
     wx.setStorageSync('memberRecords', memberRecords)
+
+    wx.showToast({
+      title: '信息录入成功',
+      icon: 'success',
+      duration: 1000,
+    })
+
+    return wx.navigateTo({
+      url: '../index',
+    })
   },
 })
